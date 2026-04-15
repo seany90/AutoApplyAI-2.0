@@ -38,7 +38,7 @@ export default function Home({ user }: { user: User | null }) {
           </h1>
           
           <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Stop filling out forms. Our Chrome Extension reads job descriptions, writes hyper-personalized cover letters, and autofills applications using your exact resume. You just click submit.
+            Apply smarter, not harder. Our AI analyzes job descriptions to instantly tailor your resume and craft personalized cover letters that highlight your best fit for the role.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -46,7 +46,7 @@ export default function Home({ user }: { user: User | null }) {
               Start 7-Day Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full w-full sm:w-auto border-slate-700 hover:bg-slate-800">
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full w-full sm:w-auto bg-slate-900 border-slate-700 text-slate-200 hover:bg-slate-700 hover:text-white transition-colors">
               See How It Works
             </Button>
           </div>
@@ -60,9 +60,9 @@ export default function Home({ user }: { user: User | null }) {
             <div className="w-12 h-12 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6">
               <Zap className="w-6 h-6 text-blue-400" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Chrome Extension Copilot</h3>
+            <h3 className="text-xl font-bold mb-3">Instant Job Analysis</h3>
             <p className="text-slate-400 leading-relaxed">
-              Browse LinkedIn and Indeed normally. Our extension reads the page and autofills the form. No headless bots, no bans.
+              Paste any job description or URL. Our AI instantly breaks down the requirements, scores your match, and identifies critical skill gaps.
             </p>
           </div>
           <div className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm">
@@ -102,7 +102,7 @@ export default function Home({ user }: { user: User | null }) {
           </div>
           
           <ul className="space-y-4 mb-8">
-            {['Unlimited AI Cover Letters', 'Chrome Extension Access', 'Format-Preserving Resume Export', 'Interview Buddy 2.0', 'Learning Lab Access'].map((feature, i) => (
+            {['Unlimited AI Cover Letters', 'Advanced ATS Scoring', 'Format-Preserving Resume Export', 'Interview Buddy 2.0', 'Learning Lab Access'].map((feature, i) => (
               <li key={i} className="flex items-center gap-3 text-slate-300">
                 <CheckCircle2 className="w-5 h-5 text-blue-400 shrink-0" />
                 <span>{feature}</span>
