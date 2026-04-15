@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and original resume",
+      "type": "object",
+      "properties": {
+        "resumeText": {
+          "type": "string",
+          "description": "The original resume text"
+        }
+      }
+    },
+    "TailoredResume": {
+      "title": "TailoredResume",
+      "description": "AI generated tailored resume",
+      "type": "object",
+      "properties": {
+        "jobTitle": { "type": "string" },
+        "jobUrl": { "type": "string" },
+        "matchScore": { "type": "number" },
+        "content": { "type": "string" },
+        "coverLetter": { "type": "string" },
+        "createdAt": { "type": "timestamp" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User document"
+    },
+    "/users/{userId}/tailoredResumes/{resumeId}": {
+      "schema": { "$ref": "#/entities/TailoredResume" },
+      "description": "Tailored resumes for a user"
+    }
+  }
+}

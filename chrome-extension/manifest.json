@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "AutoApplyAI - Job Application Assistant",
+  "version": "1.0.0",
+  "description": "Automate your job applications with AI. Extract job details and auto-fill applications instantly.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://*.linkedin.com/*",
+    "https://*.greenhouse.io/*",
+    "https://*.lever.co/*",
+    "https://*.workday.com/*",
+    "https://*.run.app/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.linkedin.com/*",
+        "https://*.greenhouse.io/*",
+        "https://*.lever.co/*",
+        "https://*.workday.com/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "externally_connectable": {
+    "matches": [
+      "https://*.run.app/*",
+      "http://localhost:3000/*"
+    ]
+  }
+}
